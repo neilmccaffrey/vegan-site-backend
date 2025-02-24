@@ -4,6 +4,7 @@ const cors = require('cors');
 const app = express();
 const port = 5001;
 require('dotenv').config();
+const recipes = require('./recipes'); // Import the recipes
 
 app.use(cors());
 
@@ -58,6 +59,12 @@ app.get("/api/restaurants", async (req, res) => {
     res.status(500).json({ error: "Internal Server Error" });
   }
 });
+
+// recipes route
+app.get("/api/recipes", (req, res) => {
+  res.json(recipes);  // Send the recipes data as the response
+});
+
 app.listen(port, () => {
   console.log(`Server running on http://localhost:${port}`);
 });
