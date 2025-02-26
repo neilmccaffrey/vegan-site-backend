@@ -1,12 +1,22 @@
-const express = require('express');
-const axios = require('axios');
-const cors = require('cors');
+import express from 'express';
+import axios from 'axios';
+import cors from 'cors';
+import dotenv from 'dotenv';
+import bodyParser from 'body-parser';
+import recipes from './recipes.js';
+import { sendRecipeSubmission } from './emailController.js';
+
 const app = express();
 const port = 5001;
-require('dotenv').config();
-const recipes = require('./recipes'); // Import the recipes
 
+dotenv.config();  // Load environment variables
 app.use(cors());
+
+// Middleware to parse JSON data
+app.use(bodyParser.json());
+
+// Route for handling recipe submissions
+app.post('/submit-recipe', sendRecipeSubmission);
 
 app.get("/api/restaurants", async (req, res) => {
   try {

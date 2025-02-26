@@ -10,4 +10,4 @@ const recipes = [
         'Layer burger buns with the jackfruit mixture and cabbage slaw.','Serve immediately and dig in!']}
   ];
   
-  module.exports = recipes;
+  export default recipes;
