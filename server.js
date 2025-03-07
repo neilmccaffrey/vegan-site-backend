@@ -5,6 +5,7 @@ import dotenv from 'dotenv';
 import bodyParser from 'body-parser';
 import recipes from './recipes.js';
 import { sendRecipeSubmission } from './emailController.js';
+import { MongoClient } from 'mongodb';
 
 const app = express();
 const port = 5001;
@@ -14,6 +15,31 @@ app.use(cors());
 
 // Middleware to parse JSON data
 app.use(bodyParser.json());
+
+//mongodb
+const uri = process.env.MONGODB_URI;
+
+let db;
+
+MongoClient.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true })
+  .then((client) => {
+    console.log("Connected to MongoDB");
+    db = client.db();  // Now you can use db to interact with your collections
+  })
+  .catch((error) => {
+    console.error("Error connecting to MongoDB", error);
+  });
+
+ 
+app.get('/vegan-forums', async (req, res) => {
+  try {
+    const collections = await db.listCollections({ name: 'vegan-forums' }).toArray();
+    res.json({ collections });
+  } catch (error) {
+    res.status(500).json({ error: 'Error accessing database' });
+  }
+});
+
 
 // Route for handling recipe submissions
 app.post('/submit-recipe', sendRecipeSubmission);
