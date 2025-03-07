@@ -24,22 +24,31 @@ let db;
 MongoClient.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true })
   .then((client) => {
     console.log("Connected to MongoDB");
-    db = client.db();  // Now you can use db to interact with your collections
+    db = client.db('vegan-forums');  // use db to interact with collections
   })
   .catch((error) => {
     console.error("Error connecting to MongoDB", error);
   });
 
- 
+  // Route for getting all forum topic names and their post counts
 app.get('/vegan-forums', async (req, res) => {
   try {
-    const collections = await db.listCollections({ name: 'vegan-forums' }).toArray();
-    res.json({ collections });
+    const collections = await db.listCollections().toArray(); 
+    const collectionNames = await Promise.all(
+      collections.map(async (collection) => {
+        const postCount = await db.collection(collection.name).countDocuments();
+        return {
+          name: collection.name,
+          postCount: postCount,
+        };
+      })
+    );
+    res.json(collectionNames);  // Return collection names with post counts
   } catch (error) {
+    console.error('Error fetching vegan forums:', error);
     res.status(500).json({ error: 'Error accessing database' });
   }
 });
-
 
 // Route for handling recipe submissions
 app.post('/submit-recipe', sendRecipeSubmission);
