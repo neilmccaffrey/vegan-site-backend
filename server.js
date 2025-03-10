@@ -50,6 +50,19 @@ app.get('/vegan-forums', async (req, res) => {
   }
 });
 
+// route for getting all posts based on topic
+app.get("/api/forums/:topic", async (req, res) => {
+  const { topic } = req.params;
+
+  try {
+    const posts = await db.collection(topic).find().toArray();
+    res.json(posts);
+  } catch (error) {
+    console.error("Error fetching posts:", error);
+    res.status(500).json({ error: "Failed to fetch posts" });
+  }
+});
+
 // Route for handling recipe submissions
 app.post('/submit-recipe', sendRecipeSubmission);
 
