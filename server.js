@@ -63,6 +63,32 @@ app.get("/api/forums/:topic", async (req, res) => {
   }
 });
 
+// route for adding a post 
+app.post('/api/forums/:topic', async (req, res) => {
+  const { topic } = req.params;
+  const { username, sub, post } = req.body;
+
+  try {
+    const newPost = {
+      username,
+      sub,
+      post,
+      createdAt: new Date(),  // Add timestamp
+    };
+
+    const topicPostsCollection = db.collection(topic); // Access the topic collection dynamically
+    const result = await topicPostsCollection.insertOne(newPost);
+
+    if(result.insertedId){
+      res.status(201).send(); // if successful send 201 response
+    }
+
+  } catch (error) {
+    console.error('Error adding post: ', error);
+    res.status(500).send('Failed to add post');
+  }
+});
+
 // Route for handling recipe submissions
 app.post('/submit-recipe', sendRecipeSubmission);
 
