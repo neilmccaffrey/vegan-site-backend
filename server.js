@@ -68,6 +68,11 @@ app.post('/api/forums/:topic', async (req, res) => {
   const { topic } = req.params;
   const { username, sub, post } = req.body;
 
+  if(!username || !sub || !post.trim()){
+    return res.status(400).json({ message: 'Post text is required.' });
+  }
+  
+
   try {
     const newPost = {
       username,
