@@ -14,6 +14,10 @@ const transporter = nodemailer.createTransport({
 export const sendRecipeSubmission = async (req, res) => {
   const { recipeName, ingredients, instructions, servings, credit } = req.body;
 
+  if(!recipeName.trim() || !ingredients.trim() || !instructions.trim() || !servings.trim()){  
+      return res.status(400).json({ message: 'All fields except credit are required' });
+  }
+
   const mailOptions = {
     from: process.env.SMTP_USER,
     to: process.env.RECEIVER_EMAIL,
