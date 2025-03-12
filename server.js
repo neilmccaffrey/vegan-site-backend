@@ -107,7 +107,7 @@ app.put('/api/forums/:topic/:postId/like', async (req, res) => {
   try {
     const topicPostsCollection = db.collection(topic);
 
-    // Ensure we fetch the post by ID
+    // fetch the post by ID
     const post = await topicPostsCollection.findOne({ _id: new ObjectId(postId) });
 
     // Check if the post exists
@@ -117,7 +117,7 @@ app.put('/api/forums/:topic/:postId/like', async (req, res) => {
 
     // Ensure likedBy field exists and is initialized
     if (!post.likedBy) {
-      post.likedBy = [];  // Initialize likedBy if undefined
+      post.likedBy = []; 
     }
 
     // Check if the user has already liked the post
@@ -125,8 +125,8 @@ app.put('/api/forums/:topic/:postId/like', async (req, res) => {
 
     // Toggle the like by either adding or removing the user
     const update = hasLiked
-      ? { $pull: { likedBy: sub } } // Remove the user's sub from likedBy
-      : { $addToSet: { likedBy: sub } }; // Add the user's sub to likedBy
+      ? { $pull: { likedBy: sub } } // Remove the user sub from likedBy
+      : { $addToSet: { likedBy: sub } }; // Add the user sub to likedBy
 
     // Update the post in the database
     const updatedPostResult = await topicPostsCollection.findOneAndUpdate(
