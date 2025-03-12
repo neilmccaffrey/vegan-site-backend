@@ -6,6 +6,7 @@ import bodyParser from 'body-parser';
 import recipes from './recipes.js';
 import { sendRecipeSubmission } from './emailController.js';
 import { MongoClient } from 'mongodb';
+import { ObjectId } from 'mongodb';
 
 const app = express();
 const port = 5001;
@@ -72,12 +73,12 @@ app.post('/api/forums/:topic', async (req, res) => {
     return res.status(400).json({ message: 'Post text is required.' });
   }
   
-
   try {
     const newPost = {
       username,
       sub,
       post,
+      likedBy: [],
       createdAt: new Date(),  // Add timestamp
     };
 
@@ -91,6 +92,55 @@ app.post('/api/forums/:topic', async (req, res) => {
   } catch (error) {
     console.error('Error adding post: ', error);
     res.status(500).send('Failed to add post');
+  }
+});
+
+// Route for adding like to post
+app.put('/api/forums/:topic/:postId/like', async (req, res) => {
+  const { topic, postId } = req.params;
+  const { sub } = req.body;
+
+  if (!sub) {
+    return res.status(400).json({ message: 'Must be logged in to like' });
+  }
+
+  try {
+    const topicPostsCollection = db.collection(topic);
+
+    // Ensure we fetch the post by ID
+    const post = await topicPostsCollection.findOne({ _id: new ObjectId(postId) });
+
+    // Check if the post exists
+    if (!post) {
+      return res.status(404).json({ message: 'Post not found.' });
+    }
+
+    // Ensure likedBy field exists and is initialized
+    if (!post.likedBy) {
+      post.likedBy = [];  // Initialize likedBy if undefined
+    }
+
+    // Check if the user has already liked the post
+    const hasLiked = post.likedBy.includes(sub);
+
+    // Toggle the like by either adding or removing the user
+    const update = hasLiked
+      ? { $pull: { likedBy: sub } } // Remove the user's sub from likedBy
+      : { $addToSet: { likedBy: sub } }; // Add the user's sub to likedBy
+
+    // Update the post in the database
+    const updatedPostResult = await topicPostsCollection.findOneAndUpdate(
+      { _id: new ObjectId(postId) },
+      update,
+      { returnDocument: 'after' }
+    );
+
+    // Return the updated post 
+    res.json(updatedPostResult.value);
+
+  } catch (error) {
+    console.error('Error updating like:', error);
+    res.status(500).json({ message: 'Failed to update like.' });
   }
 });
 
