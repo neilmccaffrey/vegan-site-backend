@@ -79,6 +79,7 @@ app.post('/api/forums/:topic', async (req, res) => {
       sub,
       post,
       likedBy: [],
+      comments: [],
       createdAt: new Date(),  // Add timestamp
     };
 
