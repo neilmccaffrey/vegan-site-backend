@@ -86,8 +86,8 @@ app.post('/api/forums/:topic', async (req, res) => {
     const topicPostsCollection = db.collection(topic); // Access the topic collection dynamically
     const result = await topicPostsCollection.insertOne(newPost);
 
-    if(result.insertedId){
-      res.status(201).send(); // if successful send 201 response
+    if (result.insertedId) {
+      res.status(201).json({ _id: result.insertedId, ...newPost }); // Return full post
     }
 
   } catch (error) {
@@ -142,6 +142,42 @@ app.put('/api/forums/:topic/:postId/like', async (req, res) => {
   } catch (error) {
     console.error('Error updating like:', error);
     res.status(500).json({ message: 'Failed to update like.' });
+  }
+});
+
+// Route for adding comment to post
+app.post('/api/forums/:topic/:postId/comment', async (req, res) => {
+  const { topic, postId } = req.params;
+  const { username, sub, comment } = req.body;
+
+  if (!username || !sub || !comment.trim()) {
+    return res.status(400).json({ message: 'Comment text is required.' });
+  }
+
+  try {
+    const newComment = {
+      _id: new ObjectId(), // unique ID for the comment
+      username,
+      sub,
+      comment,
+      createdAt: new Date(),
+    };
+
+    const topicPostsCollection = db.collection(topic);
+
+    const result = await topicPostsCollection.updateOne(
+      { _id: new ObjectId(postId) }, // Find the post by ID
+      { $push: { comments: newComment } } // Add comment to the array
+    );
+
+    if (result.modifiedCount === 0) {
+      return res.status(404).json({ message: 'Post not found.' });
+    }
+
+    res.status(201).json(newComment); // Send back the new comment
+  } catch (error) {
+    console.error('Error adding comment:', error);
+    res.status(500).send('Failed to add comment.');
   }
 });
 
