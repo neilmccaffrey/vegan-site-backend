@@ -181,6 +181,34 @@ app.post('/api/forums/:topic/:postId/comment', async (req, res) => {
   }
 });
 
+// Route for editing a post
+app.put('/api/forums/:topic/:postId/edit', async (req, res) => {
+  const { topic, postId } = req.params;
+  const { sub, editedContent } = req.body;
+
+  if (!sub || !editedContent.trim()) {
+    return res.status(400).json({ message: 'Post content is required.' });
+  }
+
+  try {
+    const topicPostsCollection = db.collection(topic);
+
+    const result = await topicPostsCollection.updateOne(
+      { _id: new ObjectId(postId), sub }, // Ensure only the author can edit
+      { $set: { post: editedContent, updatedAt: new Date() } }
+    );
+
+    if (result.modifiedCount === 0) {
+      return res.status(404).json({ message: 'Post not found or unauthorized.' });
+    }
+
+    res.status(200).json({ message: 'Post updated successfully.', editedContent });
+  } catch (error) {
+    console.error('Error updating post:', error);
+    res.status(500).send('Failed to update post.');
+  }
+});
+
 // Route for handling recipe submissions
 app.post('/submit-recipe', sendRecipeSubmission);
 
