@@ -234,16 +234,21 @@ app.delete('/api/forums/:topic/:postId/delete', async (req, res) => {
 
 // Route for deleting a comment
 app.delete('/api/forums/:topic/:postId/comments/:commentId/delete', async (req, res) => {
-  const { topic, postId, commentId } = req.params;
-  const { sub } = req.body; 
+  const { topic, postId, commentId } = req.params;  
+  const { sub } = req.body;  
 
   try {
     const topicPostsCollection = db.collection(topic);
 
-    // Find the post by ID and ensure the comment belongs to the post and the user is the author
     const result = await topicPostsCollection.updateOne(
-      { _id: new ObjectId(postId), 'comments._id': new ObjectId(commentId), sub },
-      { $pull: { comments: { _id: new ObjectId(commentId) } } } // Remove the comment
+      { 
+        _id: new ObjectId(postId),  
+        "comments._id": new ObjectId(commentId),  
+        "comments.sub": sub  
+      },
+      { 
+        $pull: { comments: { _id: new ObjectId(commentId) } }  // Remove the comment with the given commentId
+      }
     );
 
     if (result.modifiedCount > 0) {
