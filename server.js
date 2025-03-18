@@ -232,6 +232,31 @@ app.delete('/api/forums/:topic/:postId/delete', async (req, res) => {
   }
 });
 
+// Route for deleting a comment
+app.delete('/api/forums/:topic/:postId/comments/:commentId/delete', async (req, res) => {
+  const { topic, postId, commentId } = req.params;
+  const { sub } = req.body; 
+
+  try {
+    const topicPostsCollection = db.collection(topic);
+
+    // Find the post by ID and ensure the comment belongs to the post and the user is the author
+    const result = await topicPostsCollection.updateOne(
+      { _id: new ObjectId(postId), 'comments._id': new ObjectId(commentId), sub },
+      { $pull: { comments: { _id: new ObjectId(commentId) } } } // Remove the comment
+    );
+
+    if (result.modifiedCount > 0) {
+      res.status(200).json({ message: 'Comment deleted successfully.' });
+    } else {
+      res.status(404).json({ message: 'Comment not found or you are not authorized to delete it.' });
+    }
+  } catch (error) {
+    console.error('Error deleting comment:', error);
+    res.status(500).send('Failed to delete comment.');
+  }
+});
+
 // Route for handling recipe submissions
 app.post('/submit-recipe', sendRecipeSubmission);
 
