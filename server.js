@@ -209,6 +209,29 @@ app.put('/api/forums/:topic/:postId/edit', async (req, res) => {
   }
 });
 
+// Route for deleting a post
+app.delete('/api/forums/:topic/:postId/delete', async (req, res) => {
+  const { topic, postId } = req.params;
+  const { sub } = req.body;
+
+  try {
+    const topicPostsCollection = db.collection(topic);
+
+    const result = await topicPostsCollection.deleteOne(
+      { _id: new ObjectId(postId), sub }, // Ensure only the author can delete
+    );
+
+    if (result.deletedCount === 0) {
+      return res.status(404).json({ message: 'Post not found or unauthorized.' });
+    }
+
+    res.status(200).json({ message: 'Post deleted successfully.' });
+  } catch (error) {
+    console.error('Error deleting post:', error);
+    res.status(500).send('Failed to delete post.');
+  }
+});
+
 // Route for handling recipe submissions
 app.post('/submit-recipe', sendRecipeSubmission);
 
