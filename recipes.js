@@ -7,7 +7,7 @@ const recipes = [
         'Mix in the tomato paste, paprika, thyme, and jackfruit. Stir well to coat.',
         'Stir in the flour, then pour in the vegetable broth and soy sauce.','Let the mixture simmer for 10 minutes, stirring occasionally. Season with salt and pepper to taste.',
         'Grate the white cabbage, red cabbage, and carrot. Mix with vegan mayonnaise.',
-        'Layer burger buns with the jackfruit mixture and cabbage slaw.','Serve immediately and dig in!']}
+        'Layer burger buns with the jackfruit mixture and cabbage slaw.','Serve immediately and dig in!'], credit: ''}
   ];
   
   export default recipes;

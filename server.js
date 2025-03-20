@@ -7,6 +7,7 @@ import recipes from './recipes.js';
 import { sendRecipeSubmission } from './emailController.js';
 import { MongoClient } from 'mongodb';
 import { ObjectId } from 'mongodb';
+import allthingsvegan from './allthingsvegan.js';
 
 const app = express();
 const port = 5001;
@@ -320,6 +321,11 @@ app.get("/api/restaurants", async (req, res) => {
 // recipes route
 app.get("/api/recipes", (req, res) => {
   res.json(recipes);  // Send the recipes data as the response
+});
+
+// allthingsvegan route
+app.get("/api/allthingsvegan", (req, res) => {
+  res.json(allthingsvegan);
 });
 
 app.listen(port, () => {
