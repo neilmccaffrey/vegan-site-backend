@@ -11,7 +11,7 @@ const allthingsvegan = [
         id: 2,
         category: "Food",
         items: [
-          { name: 'Providence Vegan Deli', description: "Deli sliced seitan by the pound available for shipping", website: 'https://www.providencevegandeli.com/'},
+          { name: 'Providence Vegan Deli', description: "Deli sliced seitan by the pound available for shipping.", website: 'https://www.providencevegandeli.com/'},
           { name: "Beyond Meat", website: "https://www.beyondmeat.com/" },
           { name: "Impossible Foods", website: "https://impossiblefoods.com/" },
         ],

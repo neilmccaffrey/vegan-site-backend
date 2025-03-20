@@ -263,9 +263,6 @@ app.delete('/api/forums/:topic/:postId/comments/:commentId/delete', async (req, 
   }
 });
 
-// Route for handling recipe submissions
-app.post('/submit-recipe', sendRecipeSubmission);
-
 app.get("/api/restaurants", async (req, res) => {
   try {
     const { latitude, longitude, nextPageToken } = req.query;
@@ -317,6 +314,9 @@ app.get("/api/restaurants", async (req, res) => {
     res.status(500).json({ error: "Internal Server Error" });
   }
 });
+
+// Route for handling recipe submissions
+app.post('/submit-recipe', sendRecipeSubmission);
 
 // recipes route
 app.get("/api/recipes", (req, res) => {
