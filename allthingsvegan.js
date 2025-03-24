@@ -17,6 +17,7 @@ const allthingsvegan = [
           { name: 'Immaculate Vegan', description: 'Just about everything you could want. Clothes, shoes, beauty, home. ', website: 'https://immaculatevegan.com/'},
           { name: "Matt & Nat", description: 'Vegan leather bags & designer accessories.', website: "https://us.mattandnat.com/" },
           { name: 'Toad & Co', description: "Vegan friendly clothes made out of plant-based and man-made fibers.", website: 'https://www.toadandco.com/'},
+          { name: 'Vegan Leather Co.', description: 'Vegan leather goods and more', website: 'https://veganleatherco.com/'},
         ],
     },
     {
