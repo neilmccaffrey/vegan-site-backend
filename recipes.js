@@ -100,6 +100,62 @@ const recipes = [
         ],
         credit: ''
     },
+    {
+        id: 10, name: 'Vegan Chili', category: 'American', servings: 6,
+        ingredients: ['1 1/2 tablespoons extra-virgin olive oil','2 cups diced sweet onion (about 1 medium/large)','2 tablespoons minced garlic (about 4 large cloves)','2 medium jalapeños, seeded and finely chopped',
+            '1 cup finely chopped celery','1 large red bell pepper, seeded and diced','1 (28-ounce) can diced tomatoes, with juices','1 cup low-sodium vegetable broth','6 tablespoons tomato paste',
+            '1 14-ounce can kidney beans, drained and rinsed','1 14-ounce can pinto or navy beans, drained and rinsed','2 tablespoons chili powder','2 teaspoons ground cumin',
+            '1 teaspoon dried oregano','1/2 to 3/4 teaspoon fine grain sea salt, to taste','1/4 teaspoon ground cayenne pepper (optional)',
+            '1 teaspoon hot sauce (optional)'],
+        instructions: ['In a large pot, sauté the onion and the garlic in the oil over medium heat until soft and translucent, about 5 minutes. Season with a pinch of salt and stir.',
+            'Add the jalapeños, celery, and bell pepper and sauté for another 5 to 7 minutes or so, until softened.',
+            'Add the can of diced tomatoes (with the juice), broth, and tomato paste. Stir to combine. Increase heat to medium-high.',
+            'Add the drained and rinsed beans, along with the chili powder, cumin, oregano, and salt. Simmer the mixture, uncovered, until thickened, about 10 to 15 minutes.',
+            'Add the cayenne and hot sauce to taste, if using. Taste and season with additional salt if desired. Serve',
+        ],
+        credit: ''
+    },
+    {
+        id: 11, name: 'Jumbo Stuffed Shells', category: 'Italian', servings: 6,
+        ingredients: ['3.5 cups pasta sauce', '340 grams jumbo pasta shells (about 2/3 a box)', '3 garlic cloves, minced','1 medium sweet onion, diced',
+            '2 tsp extra virgin olive oil','2 celery stalks, diced','1/2 cup packed fresh basil leaves, minced','1/2 cup packed fresh parsley, minced','1 (14oz) package extra-firm or firm tofu, pressed',
+            '3 tbsp nutritional yeast','3/4-1 tsp fine grain sea salt, or to taste','Freshly ground black pepper, to taste','1 tbsp fresh lemon juice','1/2 tsp cayenne pepper or red pepper flakes (optional)'
+        ],
+        instructions: ['Rinse and press tofu', 'Grease a very large casserole dish. About 30 shells, but you should cook more than that as some shells will break during the cooking process. Cook shells in a pot of boiling water until al dente, about 8-11 minutes. Be careful not to overcook. Drain shells and set aside to cool.',
+            'Preheat oven to 400°F. For the tofu ricotta: In a large skillet, sauté the garlic and onion in the oil for about 5 minutes. Season with salt and pepper. Add in the chopped celery, basil, and parsley and sauté for another 5 minutes or so. Feel free to throw in some spinach for extra greens.',
+            'For the tofu, you can either crumble it into the skillet with your hands or you can give it a whirl in the food processor and then stir it into the skillet. If you use the processor, the texture will be very creamy like ricotta cheese and if you crumble it with your hands it will be more chunky/crumbly. It is up to you how you want to make it. Stir in the nutritional yeast, salt, pepper, lemon, and cayenne all to taste. Over medium heat, cook for about 8-10 minutes or until most of the water cooks off.',
+            'Spoon about 1 cup of marinara sauce into the casserole dish and spread around. Add about 2 tbsp of tofu ricotta into each stuffed shell and place shells on top of marinara sauce. Cover shells with the remaining 2-2.5 cups marinara sauce and any leftover tofu ricotta. You can add vegan cheese on top. Cover dish with tin foil and poke several air holes. Bake at 400°F for about 20 minutes or until heated throughout. Serve.'
+        ],
+        credit: ''
+    },
+    {
+        id: 12, name: 'Spicy Potato & Black Bean Burritos', category: 'Mexican', servings: 4,
+        ingredients: ['200 grams yellow-skinned potato, not peeled and chopped into 1” pieces (about 2 small potatoes)','150 grams sweet potato, peeled and chopped (about 1/2 large)',
+            '1 tsp extra virgin olive oil','1 cup diced red onion','1 jalapeno pepper, seeded and diced','1 small tomato, chopped','1/2 tsp chili powder','1 tsp ground cumin',
+            '1 tbsp fresh lime juice','1 cup shredded dinosaur kale, large stems removed','1.5 cups cooked black beans (one 15-oz can), drained and rinsed',
+            'Fine grain sea salt (or Herbamare) & ground pepper, to taste','toppings: Avocado slices, salsa, cilantro'
+        ],
+        instructions: ['In a medium-sized pot, add the chopped potatoes and cover with water. Bring to a boil and then reduce heat to medium. Gently boil/simmer for about 12-15 minutes, or until just tender.',
+            'Meanwhile, preheat a large skillet with 1 tsp oil and sauté the red onion over medium heat for a few minutes. After boiling the potatoes, drain and gently mash them up a bit, leaving some chunks for texture.',
+            'Add potatoes to the skillet mixture and sauté for another 5-10 minutes or so, reducing heat if necessary.',
+            'Add in the diced jalapeno, tomato, chili powder, lime, and cumin. Season generously with salt and pepper and stir well, heating for a few minutes more.',
+            'Finally, stir in the kale and black beans and sauté until heated through. Adjust seasonings to taste and portion on large or x-large tortilla wraps. Top with avocado, cilantro, and salsa'
+        ],
+        credit: ''
+    },
+    {
+        id: 13, name: 'Vegan Fajitas', category: 'Mexican', servings: 6,
+        ingredients: ['¼ cup olive oil','2½ tbsp soy sauce or tamari','2-3 tbsp lime juice, adjust to taste','2 tsp maple syrup','2 cloves garlic, finely grated',
+            '1¼ tsp ground cumin','1¼ tsp smoked paprika','¼ tsp black pepper','1/8 tsp cayenne pepper, to taste','1 red bell pepper, thickly sliced',
+            '1 yellow bell pepper, thickly sliced','1 red onion, thickly sliced','10½ oz oyster mushrooms','8 soft tortillas, kept warm'],
+        instructions: ['Make the marinade by combining the first 9 ingredients together. Mix really well.',
+            'Put all of the pepper and onion slices on a large, deep, baking tray. Add the mushrooms, tearing bigger ones into smaller pieces with your hands.',
+            'Coat everything in the marinade and set aside for as long as you can, but you can bake straight away too, if you wish.', 'Preheat the oven to 200° C / 390° F.',
+            'Bake the mushrooms and peppers for about 15 minutes, giving everything a good stir and then increase the temperature 435°F to bake for another 20-25 minutes, until all juices bake out and the ingredients get a nice char.',
+            'Assemble your vegan fajitas by putting a generous amount of filling at the bottom of each tortilla. Finish off with chopped avocado, vegan sour cream, fresh coriander and a squeeze of lime'
+        ],
+        credit: ''
+    },
   ];
   
   export default recipes;
