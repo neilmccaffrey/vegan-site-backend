@@ -4,9 +4,9 @@ const allthingsvegan = [
         category: "Food",
         items: [
           { name: 'Providence Vegan Deli', description: "Deli sliced seitan by the pound available for shipping.", website: 'https://www.providencevegandeli.com/'},
-          { name: 'Huel', description: "100% plant-based protein powder", website: 'https://huel.com/'}, 
+          { name: 'Huel', description: "100% plant-based protein powder.", website: 'https://huel.com/'}, 
           { name: "Purple Carrot", description: 'Vegan meal kits delivered to your door.', website: "https://www.purplecarrot.com/" },
-          { name: "Raaka", description: 'Vegan chocolate', website: "https://www.raakachocolate.com/" },
+          { name: "Raaka", description: 'Vegan chocolate.', website: "https://www.raakachocolate.com/" },
           { name: 'The Naughty Cookie', description: '100% vegan cookies shipped to your door.', website: 'https://www.thenaughtycookie.com/'},
         ],
     },
@@ -17,7 +17,7 @@ const allthingsvegan = [
           { name: 'Immaculate Vegan', description: 'Just about everything you could want. Clothes, shoes, beauty, home. ', website: 'https://immaculatevegan.com/'},
           { name: "Matt & Nat", description: 'Vegan leather bags & designer accessories.', website: "https://us.mattandnat.com/" },
           { name: 'Toad & Co', description: "Vegan friendly clothes made out of plant-based and man-made fibers.", website: 'https://www.toadandco.com/'},
-          { name: 'Vegan Leather Co.', description: 'Vegan leather goods and more', website: 'https://veganleatherco.com/'},
+          { name: 'Vegan Leather Co.', description: 'Vegan leather goods and more.', website: 'https://veganleatherco.com/'},
         ],
     },
     {
