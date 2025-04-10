@@ -156,6 +156,45 @@ const recipes = [
         ],
         credit: ''
     },
+    {
+        id: 14, name: 'Sweet Potato & Peanut Curry', category: 'Asian', servings: 4, 
+        ingredients: ['1 tbsp coconut oil','2 garlic cloves (grated)', 'thumb-sized piece ginger (grated)','3 tbsp Thai red curry paste',
+            '1 tbsp smooth peanut butter', '500g/1lb 2oz sweet potato (peeled and cut into chunks)','400ml can coconut milk','200g/7oz bag spinach',
+            '1 lime (juiced)', 'dry roasted peanuts to serve (optional)',
+         ],
+        instructions: ['Melt 1 tbsp coconut oil in a saucepan over a medium heat and soften 1 chopped onion for 5 mins. Add 2 grated garlic cloves and grated thumb-sized piece of ginger, and cook for 1 min until fragrant.',
+            'Stir in 3 tbsp Thai red curry paste, 1 tbsp smooth peanut butter and 500g/1lb 2oz sweet potato, peeled and cut into chunks, then add 400ml/14fl oz coconut milk and 200ml/7fl oz water.',
+            'Bring to the boil, turn down the heat and simmer, uncovered, for 25-30 mins or until the sweet potato is soft.',
+            'Stir through 200g/7oz spinach and the juice of 1 lime, and season well. Serve with cooked rice, and if you want some crunch, sprinkle over a few dry roasted peanuts.'
+        ],
+        credit: ''
+    },
+    {
+        id: 15, name: 'Vegan Ramen', category: 'Asian', servings: 2,
+        ingredients: ['2 garlic cloves','thumb-sized piece ginger (sliced)', '1½ tbsp white miso paste', '1 tbsp neri goma (white sesame paste) or tahini', 
+            '15g dried shiitake mushrooms', '4 cups vegan stock', '2 tbsp soy sauce', '200g firm tofu cut into cubes', '1 tbsp cornflour',
+            '1 tbsp veg or sunflower oil', '100g (2 x nests) ramem', '1 head bok choy quartered', '2 spring onions finely sliced, white and green parts kept separate',
+            '25g ready-to-eat beansprouts', '1 carrot peeled and cut into fine matchsticks'
+        ],
+        instructions: ['Crush the garlic with the back of a big knife, then put it in a saucepan with the ginger, miso, neri goma, mushrooms, stock and soy. Bring to a gentle simmer, cover and bubble for 5 mins until the ginger is soft. Strain into a clean pan and discard everything left in the strainer.',
+            'Meanwhile, cook the tofu. Toss it in the cornflour and heat the oil in a frying pan. Fry for a few mins on each side, being careful as you turn it that it doesn’t fall apart. Cook the noodles for 1 min less than pack instructions, so they retain a little bite. Drain and leave in the pan with a little cooking water so they don’t stick together.',
+            'Add the bok choy and whites of the spring onions to the broth and gently reheat for 1-2 mins until the greens have just wilted.',
+            'Divide the noodles between two deep bowls, ladle over the broth and veg. Top with the tofu, beansprouts, carrot and ginger matchsticks, green parts of the spring onions and a drizzle of sesame oil, plus the other toppings, if you like.',
+        ],
+        credit: ''
+    },
+    {
+        id: 16, name: 'Vegan Burritos', category: 'Mexican', servings: 4,
+        ingredients: ['4 large or 8 small tortilla wraps', '2 large handfuls spinach leaves shredded', '1 avocado thinly sliced (optional)',
+            '1 tbsp oil', '1 garlic clove crushed', '1 tbsp chipotle paste', '400g can chopped tomatoes', '400g black beans drained', '1 bunch coriander chopped',
+            '250g wholegrain rice cooked and drained', '1 lime (juiced)', '½ red onion very finely chopped', '50g hazelnuts roughly chopped',
+        ],
+        instructions: ['To make the beans, heat the oil in a pan and fry the garlic for a minute, then stir in the chipotle paste. Add in the tomatoes, stir and bring to a simmer. Season with salt. Simmer until thick, add the beans and cook briefly (make sure any water gets cooked off), then stir in the coriander.',
+            'If you are using cold cooked rice, then warm it through, stir in the lime juice, red onion and nuts and season well.',
+            'Lay out the tortillas and sprinkle over some spinach, add some avocado slices and some rice, then top with the bean mix. Add a shake of hot sauce, if you like. Roll the bottom up, then fold the sides in to stop the filling falling out as you roll. Wrap tightly in foil, if you like, and cut in half.'
+        ],
+        credit: ''
+    },
   ];
   
   export default recipes;
