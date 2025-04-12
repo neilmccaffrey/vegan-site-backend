@@ -195,6 +195,45 @@ const recipes = [
         ],
         credit: ''
     },
+    {
+        id: 17, name: 'Vegan Crunchwraps', category: 'Mexican', servings: 8,
+        ingredients: ['2 1/2 cups cooked green lentils (from about 1 cup dried)','1 Tbsp. extra-virgin olive oil','1 small yellow onion, finely chopped',
+            '2 garlic cloves, minced','3 Tbsp. tomato paste','1 chipotle pepper in adobo sauce','1 tsp. ground cumin','1/2 tsp. ground coriander','Kosher salt'
+        ],
+        instructions: ['In a large skillet over medium heat, heat oil. Add onion and cook until soft, 6 minutes. Add garlic and cook until fragrant, 1 minute more. Add tomato paste and chipotle pepper, and cook, mashing pepper with a wooden spoon, until tomato paste has darkened slightly, 2 minutes. Add cumin and coriander and season with salt. Add lentils and ¼ cup cold water. Stir to combine, then cook, stirring and mashing some of the lentils occasionally, until lentils are heated through and partially mashed, and no liquid remains, about 5 minutes. Add more water a tablespoon at a time if skillet becomes dry.',
+            'Add a scoop of spiced lentils to the center of each flour tortilla, leaving a generous border clear for folding. Drizzle with chipotle queso, then top with a tostada shell. Spread tostada shell with an even layer of guacamole, then scatter lettuce and tomato on top.',
+            'Tightly fold edges of large tortilla toward the center, creating pleats. Carefully invert crunchy wraps so pleats are on the bottom and they stay together.',
+            'Heat a thin layer of oil in a medium skillet over medium heat.  Once the oil is shimmering, add one crunchy wrap at a time, seam-side down, and cook until golden, 3 minutes per side. Transfer to a plate and repeat with remaining crunchy wraps.',
+        ],
+        credit: ''
+    },
+    {
+        id: 18, name: 'Tofu Scramble', category: 'American', servings: 4,
+        ingredients: ['2 tsp. ground cumin','1 tsp. dried thyme','1/2 tsp. smoked paprika','1/2 tsp. ground turmeric','2 Tbsp. extra-virgin olive oil',
+            '1 lb. extra-firm tofu, drained for 30 minutes and torn into bite-sized pieces','2 cloves garlic, minced','Kosher salt',
+            'Freshly ground black pepper','2 Tbsp. nutritional yeast (optional)','cilantro leaves, for garnish'
+        ],
+        instructions: ['In a small bowl, combine cumin, thyme, paprika, and turmeric. Add 3 tablespoons water and whisk to combine',
+            'In a large skillet over medium heat, heat oil. Add tofu to skillet in an even layer, season with salt and pepper. Let cook undisturbed for 7 to 8 minutes, until undersides are golden.',
+            'Add garlic to skillet, and stir into tofu. Cook until fragrant, 1 to 2 minutes, then add spice mixture and nutritional yeast if using. Stir to incorporate all ingredients, then continue cook, stirring occasionally, for 2 to 3 more minutes, until all water is evaporated and spices are fragrant.',
+            'Season to taste with salt and pepper to taste, garnish with cilantro, and serve immediately.'
+        ],
+        credit: ''
+    },
+    {
+        id: 19, name: 'Vegan Meatloaf', category: 'American', servings: 8,
+        ingredients: ['1 Tbsp. extra-virgin olive oil','1/2 yellow onion, finely chopped','2 stalks celery, finely chopped','1 medium carrot, peeled and finely chopped',
+            '1 cup finely chopped baby bella mushrooms','2 (15-oz) cans chickpeas, drained and rinsed','1 cup panko bread crumbs','1/4 cup freshly chopped parsley, plus more for garnish',
+            '2 Tbsp. low-sodium soy sauce','1 Tbsp. vegan Worcestershire sauce','1/4 cup ketchup','1/4 cup barbecue sauce','1/2 tsp. smoked paprika','Kosher salt','Freshly ground black pepper'
+        ],
+        instructions: ['Preheat oven to 375º and line an 5"-x-8" loaf pan with parchment paper. In a large skillet over medium heat, heat oil. Add onion, celery, carrot, and mushrooms and cook, stirring occasionally, until vegetables are soft and most of the liquid has cooked out, 6 to 8 minutes.',
+            'Using a potato masher in a large bowl or food processor, mash the chickpeas until a rough paste forms. (A few large pieces of chickpea are OK.) Transfer to a large bowl if using a food processor.',
+            'Add cooked vegetables, bread crumbs, parsley, soy sauce, and Worcestershire sauce to the bowl with chickpeas. In a medium bowl, whisk together ketchup and barbecue sauce. Add half of this mixture to the bowl with the chickpeas. Season with paprika, salt, and pepper, and stir until all ingredients are evenly incorporated.',
+            'Transfer chickpea mixture to prepared loaf pan, packing the mixture in gently. Smooth top, then brush with half of the remaining ketchup mixture and bake for 30 minutes. Remove from oven, brush with remaining ketchup mixture, and bake 30 minutes more.',
+            'Let cool 10 minutes, then garnish with parsley and serve',
+        ],
+        credit: ''
+    },
   ];
   
   export default recipes;
