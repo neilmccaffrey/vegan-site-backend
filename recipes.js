@@ -234,6 +234,97 @@ const recipes = [
         ],
         credit: ''
     },
+    {
+        id: 20, name: 'Creamy Tomato Vegan Pasta', category: 'Italian', servings: 4,
+        ingredients: ['1 1/2 cups water, divided, plus more for pasta','3/4 cup raw cashews, divided','2 Tbsp. plus 1 1/4 tsp. kosher salt, divided',
+            '16 oz. penne','3 Tbsp. extra-virgin olive oil, divided','3 tsp. crushed red pepper flakes, divided','1 small yellow onion, chopped',
+            '4 cloves garlic, finely chopped','6 Tbsp. tomato paste','1/4 cup sun-dried tomatoes, finely chopped','1/4 cup fresh basil leaves, finely chopped, for serving',
+        ],
+        instructions: ['In a small pot over high heat, heat 1 cup water just until boiling. Remove from heat and add 1/2 cup cashews. Cover and let soak 1 hour.',
+            'Drain soaked cashews, discarding soaking liquid, and thoroughly rinse. Transfer to a blender and add 1/2 cup water and 1/8 teaspoon salt. Blend until smooth, then transfer to a small container (you should have about 3/4 cup cashew cream).',
+            'Bring a large pot of water to a boil and stir in 2 tablespoons salt. Add penne and cook, stirring occasionally, until very al dente, 2 to 3 minutes less than package instructions. Drain pasta, reserving 1 1/2 cups pasta cooking liquid.',
+            'Meanwhile, in a large, high-sided skillet, combine 1 tablespoon oil, 1/8 teaspoon red pepper flakes, 1/8 teaspoon salt, and remaining 1/4 cup cashews. Toast over low heat, tossing frequently, until fragrant, 4 to 5 minutes. Transfer to a small bowl; set aside. Wipe out skillet.',
+            'In same skillet, heat remaining 2 tablespoons oil. Add onion, garlic, and 1/2 teaspoon salt and cook, stirring occasionally, until onions are softened, 5 to 7 minutes. Add tomato paste, sun-dried tomatoes, and remaining 1/4 teaspoon red pepper flakes and cook, stirring constantly, until paste darkens and starts to stick to bottom of pot, 3 to 4 minutes.',
+            'Whisk in 3/4 cup cashew cream and 3/4 cup reserved pasta cooking liquid until combined, then bring to a simmer over medium-high heat. Add pasta and cook, tossing constantly and adding more pasta cooking liquid 1/4 cup at a time as needed, until pasta is al dente and sauce is glossy and coats pasta, 2 to 3 minutes; season with remaining 1/2 teaspoon salt as needed.',
+            'Divide pasta among bowls. Using a microplane, finely grate reserved toasted cashews over pasta. Top with basil.',
+        ],
+        credit: ''
+    },
+    {
+        id: 21, name: 'Vegan Meatballs', category: 'Italian', servings: 4,
+        ingredients: ['Cooking spray, for pan','2 cups canned chickpeas','2 1/2 Tbsp. chia seeds','6 Tbsp. water','1/2 cup rolled oats',
+            '1 1/2 Tbsp. tomato paste','3 Tbsp. chopped basil','1 clove garlic, minced','1/2 tsp. fennel seeds','1/4 tsp. red pepper flakes',
+            'Kosher salt','Freshly ground black pepper'
+        ],
+        instructions: ['Preheat oven to 425°, then line a medium baking sheet with aluminum foil and grease with cooking spray.',
+            'Drain chickpeas, reserving liquid. Transfer chickpeas to a food processor and process until broken down.',
+            'Make chia egg: Combine chia seeds and water in a medium bowl and stir to combine. Let sit 5 minutes, until mixture gels and becomes thick.',
+            'Add chia egg, oats, tomato paste, basil, garlic, fennel seeds, and red pepper flakes into the food processor and blend until combined. If mixture is too dry, add liquid from chickpea can 1 tablespoon at a time until desired consistency is reached. Season with salt and pepper.',
+            'Form mixture into 16 meatballs and place on prepared baking sheet. Bake for 10 minutes, flip meatballs, and bake 8 to 10 minutes more, until golden and crisp. Serve with your favorite pasta and sauce.',
+        ],
+        credit: ''
+    },
+    {
+        id: 22, name: 'Tempeh Buffalo Wings', category: 'American', servings: 4,
+        ingredients: ['2 (8-ounce) blocks tempeh','2 Tbsp. safflower or vegetable oil, plus more for grill',`1/2 cup hot sauce (Frank's preferred)`,
+            '1/2 cup vegan butter','1 Tbsp. light agave syrup','4 celery stalks, cut into sticks, for serving'
+        ],
+        instructions: ['Cut each block of tempeh crosswise into 3 pieces, then diagonally to create 6 triangular pieces per block. Fill bottom of a medium saucepan with about 2 inches of water and fit with a steamer basket. Place saucepan over medium-high heat and bring to a simmer. Once simmering, carefully arrange tempeh pieces in an even layer in steamer basket. Cover, reduce heat to medium, and steam 15 minutes.',
+            'Using tongs, transfer tempeh to a medium bowl and toss with oil.',
+            'Meanwhile, in a small saucepan, combine hot sauce, vegan butter, and agave syrup and bring to a simmer. Cook, whisking occasionally, until mixture slightly reduced, about 6 minutes. Transfer to a large heatproof bowl; keep warm.',
+            'Preheat a grill or grill pan to medium-high and lightly oil grates. Add steamed tempeh and cook, turning a few times, until golden all over, about 6 minutes. Transfer tempeh directly to bowl with buffalo sauce and toss to coat.'
+        ],
+        credit: ''
+    },
+    {
+        id: 23, name: 'Cashew Cream Alfredo', category: 'Italian', servings: 4,
+        ingredients: ['1 cup cashews','1 lb. fettuccine','2 cloves garlic','1/2 cup water, plus more as needed','1/4 cup extra-virgin olive oil',
+            '1/4 cup vegan parmesan, grated','2 tsp. nutritional yeast','Kosher Salt','Freshly Ground Black Pepper'
+        ],
+        instructions: ['In a medium bowl, add cashews and enough water to cover. Soak for 4 hours, or up to 12 hours, until they have softened. This will help to blend cashews into a fine paste. (If you don’t have a high-powered blender, the closer to 12 hours the better.)',
+            'In a large pot of boiling salted water, cook pasta according to package instructions. Drain and set aside.',
+            'Blend cashews, garlic,½cup water, and olive oil on high for 1 to 2 minutes, or until mixture is completely smooth. Transfer mixture to a small saucepan and heat on medium-low for 1 minute, or until mixture is warm.',
+            'Add Parmesan and yeast, stirring to incorporate.If sauce is too thick, gradually add water, stirring to combine, until desired thickness is reached.',
+            'Season sauce to taste with salt and a generous amount of fresh black pepper. Add boiled pasta to sauce and toss to coat.'
+        ],
+        credit: ''
+    },
+    {
+        id: 24, name: 'Toasted Sesame Oil Mashed Potatoes', category: 'American', servings: 6,
+        ingredients: ['2 lb. Yukon gold potatoes, peeled and quartered','Kosher salt','3 Tbsp. vegan butter, melted','2 Tbsp. toasted sesame oil',
+            '2 green onions, thinly sliced','2 cloves garlic, minced','Freshly ground black pepper','Toasted sesame seeds, for garnish'
+        ],
+        instructions: ['In a large pot, add potatoes and add enough water to cover by at least 2 inches. Season well with salt. Bring to a boil and boil until potatoes are easily pierced with a fork, about 12 minutes.',
+            'Drain and return potatoes to pot.',
+            'Mash potatoes with a wooden spoon or potato masher until they are almost smooth, but big chunks still remain. Add melted butter and oil and stir until well combined. Add most of the green onions, saving some for garnish, and garlic and continue stirring until combined and potatoes are your desired consistency. Season with salt and pepper to taste.',
+            'Garnish with reserved green onions and toasted sesame seeds.'
+        ],
+        credit: ''
+    },
+    {
+        id: 25, name: 'Chipotle Vegan Queso', category: 'Mexican', servings: 4,
+        ingredients: ['2 cups raw cashews (10 oz.)','3 1/2 tsp. chile powder, divided','4 tsp.  chipotle en adobo sauce, divided','1 garlic clove', 
+            '1 tsp. nutritional yeast','1 tsp. onion powder','1/2 tsp. ground turmeric','1/2 tsp. garlic powder','1/2 tsp. ground cumin','1 1/2 cups boiling water, plus more as needed',
+            'Kosher salt','2 Tbsp. extra-virgin olive oil','1 cup fresh or frozen corn (thawed if frozen)','1/2 jalapeno, thinly sliced','Cilantro leaves, for garrnish','Tortilla chips, for serving'
+        ],
+        instructions:['Combine cashews, 2½ teaspoons of the chile powder, 1 tablespoon of the chipotle sauce, garlic, nutritional yeast, onion powder, turmeric, garlic powder, and cumin in a blender. Carefully pour the boiling water into the carafe. Cover and blend on high until smooth, about 1 minute. Season with salt, adding extra water a tablespoon at a time as needed to thin to a thick, queso-like consistency, blending after each addition. Transfer the queso to a serving bowl.',
+            'Heat oil in a medium skillet over medium-high. Add corn and cook, stirring, until lightly charred, 1 to 2 minutes. Remove from heat and stir in the remaining teaspoon of chile powder and the remaining teaspoon of chipotle sauce. Spoon the corn over the queso, top with jalapeño and cilantro, and serve with tortilla chips.',
+        ],
+        credit: ''
+    },
+    {
+        id: 26, name: 'Vegan Stuffing', category: 'American', servings: 8,
+        ingredients: ['1 loaf of crusty country bread','Cooking spray','3 Tbsp. extra-virgin olive oil','1 large onion, diced','4 stalks celery, thinly sliced',
+            '6 cloves garlic, minced','2 cups vegetable stock or water','Kosher salt','Freshly ground black pepper','3 sprigs thyme, stems removed',
+            '2 sprigs sage, finely chopped','1 sprig rosemary, finely chopped'
+        ],
+        instructions: ['The day before: Slice bread into 1" cubes and leave out overnight to dry out. (Alternately, place bread on baking sheets and bake at 200º for 20 minutes.)',
+            'Preheat oven to 350° and grease a 3-quart baking dish with cooking spray. Heat oil in a large skillet over medium heat, add onion, and cook until lightly charred in some spots, about 5 minutes. Add celery and garlic and continue to cook, stirring occasionally, until celery starts looking translucent. Add vegetable stock to pan with veggies and scrape up any browned bits with a wooden spoon. Season with salt and pepper.',
+            'Mix bread with vegetable mixture and chopped herbs until well combined and transfer to prepared pan.',
+            'Cover tightly with foil and bake for 40 minutes. Remove foil and continue to bake until stuffing is golden brown and crisp on top, about 35 minutes more.',
+        ],
+        credit: ''
+    },
   ];
   
   export default recipes;
